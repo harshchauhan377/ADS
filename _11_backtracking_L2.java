@@ -12,7 +12,7 @@ public class _11_backtracking_L2{
         int n = s.length();
         back(s, 0, res, "", n);
 
-        // ✅ Sort the result lexicographically
+        //  Sort the result lexicographically
         Collections.sort(res);
         System.out.print("print all Subsequence of String in lexicographically order :- ");
         System.out.println(res);
