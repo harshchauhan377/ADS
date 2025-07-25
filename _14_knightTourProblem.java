@@ -1,4 +1,3 @@
-import java.util.*;
 import java.util.Arrays;
 public class _14_knightTourProblem{
     public static void main(String[] args) {
@@ -32,12 +31,12 @@ public class _14_knightTourProblem{
             return true;
         }
 
-        int dx[8]={2,1,-1,-2,-2,-1,1,2};
-        int dy[8]={1,2,2,1,-1,-2,-2,-1};
+        int dx[]={2,1,-1,-2,-2,-1,1,2};
+        int dy[]={1,2,2,1,-1,-2,-2,-1};
 
-        for(int idx = 0 ; idx<8 ; i++){
+        for(int idx = 0 ; idx<8 ; idx++){
             int nextI = i + dx[idx];
-            int nextJ = i + dy[idx];
+            int nextJ = j + dy[idx];
             
             if(isSafe(nextI , nextJ , sol , N)){
                 sol[nextI][nextJ] = moves;
@@ -53,7 +52,7 @@ public class _14_knightTourProblem{
     }
 
     public static boolean isSafe(int i , int j , int sol[][] , int N){
-        if( i>0 || i<N || j>0 || j<N || sol[i][j] != -1){
+        if( i<0 || i>=N || j<0 || j>=N || sol[i][j] != -1){
             return false;
         }
         return true;
